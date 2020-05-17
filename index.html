@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+  <style> 
+
+    .remove
+{
+border-radius: 5px;
+color: red;
+font-weight: bold;
+}
+  div
+  {
+  background-color: lightgray;
+  width: 50%;
+  margin-left: 20px;
+  padding:20px;
+  border-radius: 20px;
+  }
+
+  #submit {
+    margin: 5px;
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+  body{
+  background: url(background.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+    @media only screen and (min-width: 1700px)
+{
+  body
+  {
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+}
+
+input[type = 'text']
+{
+  width: 120px;
+}
+
+input::placeholder
+{
+  font-size: 75%;
+  color: rgb(220,220,220);
+}
+  </style>
+
+
+</head>
+
+<!-- WHY IS MY PAGE LOPSIDED
+LOOK UP INSTRUCTIONS FOR DEPLOYMENT -->
+<body>
+
+<table>
+  <tr>
+    <th>Train Name</th>
+    <th>Destination</th>
+    <th>Frequency</th>
+    <th>Minutes Away</th>
+    <th>Next Arrival</th>
+  </tr>
+  
+</table>
+
+
+
+<hr>
+
+<div>
+ <form>
+
+ <!--  Change validation methods too while you're at it -->
+  Train Name: <input type="text" id="name">
+  <br>
+  <br>
+  Destination: <input type = "text" id="dest" list = "cities">
+   <datalist id = "cities">
+     <option value = "New York"/>
+      <option value = "Chicago"/>
+     <option value = "Austin"/>
+     <option value = "London"/>
+     <option value = "San Francisco"/>
+     <option value = "Berlin"/>
+      <option value = "Munich"/>
+     <option value = "Tokyo"/>
+   </datalist>
+  <br>
+  <br>
+  First Train Time (HH:mm): <input type="text" id="firstTT" placeholder = "(ex. 08:45 for 8:45pm)">
+  <br>
+  <br>
+  Frequency: Min <input type = "text" id = "freq" style = "width:50px">
+  <br>
+  <br>
+  <input type="submit" value = "Submit" id ="submit" data-toggle="tool-tip" title="add train" 
+  >
+
+
+ </form>
+</div>
+
+     <script src = "train.js">
+    </script>
+
+
+  </body>
+  </html>
